@@ -1,4 +1,6 @@
 import { container, productList } from "./products";
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
 export let carts = [];
 
@@ -35,7 +37,15 @@ export const addToCart = (product_id) => {
     } else {
         carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1;
     }
-    console.log(carts)
+    Toastify({
+        text: "Añadido al carrito",
+        className: "info",
+        gravity: "top",
+        position: "center",
+        style: {
+            background: "linear-gradient(to right, #3aa4b4 , #1dfd82)",
+        }
+    }).showToast();
     addCartToStorage();
 };
 

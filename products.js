@@ -9,7 +9,7 @@ export const showProductsToHtml = () => {
     productList.forEach((product) => {
         const div = document.createElement('div')
         div.dataset.id = product.category;
-        div.className = "card card-compact bg-base-100 w-80  shadow-xl"
+        div.className = "card card-compact bg-base-300 w-80 shadow-xl"
         div.innerHTML = `
         <figure>
         <img src="${product.image.desktop}"alt="" />
