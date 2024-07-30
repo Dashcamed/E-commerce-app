@@ -3,5 +3,9 @@
 
 Página de e-commerce con carrito de compras habilitado.
 
-https://dessertsecommmerce.netlify.app/
+Hecha con vanilla Javascript, tailwind y vite.
+
+https://dessertsecommerceapp.netlify.app/
+
+
 
