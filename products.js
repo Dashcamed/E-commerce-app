@@ -12,7 +12,7 @@ export const showProductsToHtml = () => {
         div.className = "card card-compact bg-base-300 w-80 shadow-xl"
         div.innerHTML = `
         <figure>
-        <img src="${product.image.desktop}"alt="" />
+        <img src="${product.image.tablet}"alt="" />
         </figure>
         <div class="card-body">
             <h2 class="card-title">${product.category}</h2>

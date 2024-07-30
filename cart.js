@@ -67,7 +67,7 @@ export const addCartToHtml = () => {
             let info = productList[positionProduct]
             totalPrice += info.price * cart.quantity;
             newCart.innerHTML = `
-            <img class="size-12" src="${info.image.mobile}" alt="">
+            <img class="size-12" src="${info.image.thumbnail}" alt="">
             <button class="minus btn btn-warning"> - </button>
             <span class="p-3 px-3">${cart.quantity}</span>
             <button class="plus btn btn-success"> + </button>
