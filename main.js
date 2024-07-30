@@ -1,3 +1,8 @@
-import { showProducts } from "./app";
+import { addCartToHtml } from "./cart";
+import { showProducts } from "./products";
 
-showProducts()
+document.addEventListener('DOMContentLoaded', () => {
+    showProducts()
+    addCartToHtml()
+})
+
