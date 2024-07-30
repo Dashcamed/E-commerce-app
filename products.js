@@ -1,10 +1,11 @@
-import { cartListeners } from "./cart";
+import { addCartToHtml, cartListeners, carts } from "./cart";
 
 export const container = document.getElementById('container-desserts')
 
 export let productList = []
 
 export const showProductsToHtml = () => {
+    container.innerHTML = '';
     productList.forEach((product) => {
         const div = document.createElement('div')
         div.dataset.id = product.category;
@@ -34,5 +35,11 @@ export const showProducts = () => {
         productList = data;
         console.log(productList)
         showProductsToHtml()
+
+        if(localStorage.getItem('cart')){
+            carts.length = 0;
+            carts.push(...JSON.parse(localStorage.getItem('cart')));
+            addCartToHtml();
+        }
     })
 };
